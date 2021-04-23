@@ -6,7 +6,7 @@
 	<groupId>com.myspace.change</groupId>
 	<artifactId>ajChange</artifactId>
 	<version>1.0</version>
-	<packaging>jar</packaging>
+	<packaging>kjar</packaging>
 	
 	<name>Drools Kie</name>
 	<description>Drools Kie with SpringBoot</description>
@@ -90,14 +90,13 @@
   </pluginRepositories>
 	
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			               <configuration>
-                    <skip>true</skip>
-                </configuration>
-			</plugin>
-		</plugins>
-	</build>
+        <plugins>
+            <plugin>
+                <groupId>org.kie</groupId>
+                <artifactId>kie-maven-plugin</artifactId>
+                <version>7.18.0.Final</version>
+                <extensions>true</extensions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
